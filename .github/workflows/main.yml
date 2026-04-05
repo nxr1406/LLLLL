@@ -1,4 +1,4 @@
-name: Generate Keystore
+name: Keystore
 
 on:
   workflow_dispatch:
