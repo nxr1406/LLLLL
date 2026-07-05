@@ -1,0 +1,132 @@
+SANATAN EDITION -- LANDING PAGE TEMPLATE
+COMMERCIAL LICENSE AGREEMENT
+
+Copyright (c) 2026 [LICENSOR NAME / COMPANY]
+All Rights Reserved.
+
+Product: Sanatan Edition Landing Page Template (HTML/CSS/JS frontend,
+         with planned C# / ASP.NET Core backend integration)
+Version: 1.0
+Effective Date: [DATE OF SALE]
+
+--------------------------------------------------------------------
+1. DEFINITIONS
+--------------------------------------------------------------------
+"Licensor" means [LICENSOR NAME / COMPANY], the creator and owner of
+this product.
+
+"Licensee" / "You" means the individual or organization that has
+purchased a license to use this product.
+
+"Product" means the source code, design assets, documentation, and
+any associated files delivered as part of this template.
+
+"End Product" means the final website, application, or service in
+which the Product is used.
+
+--------------------------------------------------------------------
+2. GRANT OF LICENSE
+--------------------------------------------------------------------
+Upon payment of the applicable license fee, Licensor grants Licensee
+a non-exclusive, non-transferable, worldwide license to:
+
+  a) Use, modify, and adapt the Product to build ONE (1) End Product,
+     for personal or commercial use (e.g. your own community site,
+     or a single client project); and
+
+  b) Integrate the Product with a backend of your choice, including
+     a custom C# / ASP.NET Core backend.
+
+For use across multiple End Products (e.g. reselling this template,
+or deploying it for several separate clients), a separate Extended
+License must be purchased from Licensor.
+
+--------------------------------------------------------------------
+3. RESTRICTIONS
+--------------------------------------------------------------------
+Licensee may NOT, without prior written consent from Licensor:
+
+  a) Resell, sublicense, redistribute, or share the Product's source
+     files -- as-is or substantially unmodified -- as a standalone
+     product, template, or "starter kit," whether free or paid;
+
+  b) Claim original authorship or ownership of the underlying design
+     or source code;
+
+  c) Use the Product in any way that infringes on trademarks, or
+     that is unlawful, defamatory, or fraudulent;
+
+  d) Remove this license file from the delivered Product.
+
+--------------------------------------------------------------------
+4. OWNERSHIP & INTELLECTUAL PROPERTY
+--------------------------------------------------------------------
+The Product remains the intellectual property of Licensor. This
+license grants usage rights only -- it does not transfer copyright
+or ownership of the underlying source code, design, or branding
+assets to Licensee, except for content Licensee itself supplies
+(e.g. photos, logos, or copy specific to Licensee's own community
+or brand).
+
+--------------------------------------------------------------------
+5. THIRD-PARTY COMPONENTS
+--------------------------------------------------------------------
+This Product uses the following third-party resources, each governed
+by its own license or terms:
+
+  - Tailwind CSS (MIT License)              https://tailwindcss.com
+  - Google Fonts: Playfair Display, Poppins (SIL Open Font License)
+  - TikTok Embed SDK -- subject to TikTok's Developer / Embed Terms
+
+Licensee is responsible for complying with the terms of these
+third-party services, particularly TikTok's terms when embedding
+video content.
+
+--------------------------------------------------------------------
+6. WARRANTY DISCLAIMER
+--------------------------------------------------------------------
+THE PRODUCT IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT.
+
+--------------------------------------------------------------------
+7. LIMITATION OF LIABILITY
+--------------------------------------------------------------------
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE
+PRODUCT OR ITS USE, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
+OTHERWISE.
+
+--------------------------------------------------------------------
+8. TERMINATION
+--------------------------------------------------------------------
+This license terminates automatically if Licensee breaches any of
+its terms. Upon termination, Licensee must stop using the Product
+and remove it from all live End Products.
+
+--------------------------------------------------------------------
+9. REFUNDS
+--------------------------------------------------------------------
+[Insert your refund policy here -- for example: "Due to the digital
+nature of this Product, all sales are final and non-refundable once
+the source files have been delivered."]
+
+--------------------------------------------------------------------
+10. GOVERNING LAW
+--------------------------------------------------------------------
+This Agreement shall be governed by the laws of [YOUR COUNTRY /
+STATE], without regard to conflict-of-law principles.
+
+--------------------------------------------------------------------
+11. CONTACT
+--------------------------------------------------------------------
+For licensing questions, extended licenses, or support:
+[YOUR EMAIL / CONTACT LINK]
+
+--------------------------------------------------------------------
+NOTE: This is a general-purpose commercial license template, not
+legal advice. If this sale is high-value or cross-border, it's
+worth having a lawyer review or tailor this document to your
+specific jurisdiction.
+--------------------------------------------------------------------
