@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] | Sanatan Edition</title>
+
+    <meta name="description" content="দুঃখিত, আপনি যে পৃষ্ঠাটি খুঁজছেন তা পাওয়া যায়নি।">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C9942A',
+                            light: '#E4B75C',
+                            dark: '#8A6416'
+                        },
+                        ink: '#1A1410'
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        body: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .om-glow {
+            text-shadow: 0 0 30px rgba(201,148,42,.8),
+                         0 0 60px rgba(201,148,42,.4);
+        }
+
+        .gold-gradient {
+            background: linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
+        }
+
+        .gold-text-gradient{
+            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .hero-bg{
+            background:
+                radial-gradient(circle at 50% 50%,rgba(228,183,92,.15) 0%,rgba(228,183,92,.05) 40%,transparent 70%),
+                linear-gradient(180deg,#FBF7EE 0%,#F3E9D2 55%,#E9D9AE 100%);
+        }
+
+        @keyframes float{
+            0%,100%{transform:translateY(0)}
+            50%{transform:translateY(-10px)}
+        }
+
+        .animate-float{
+            animation:float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-[#FBF7EE] text-ink min-h-screen hero-bg">
+
+    @RenderBody()
+
+</body>
+</html>
