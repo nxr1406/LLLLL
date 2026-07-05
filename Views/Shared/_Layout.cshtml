@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>@ViewData["Title"] | Sanatan Edition</title>
+
+    <meta name="description" content="Sanatan Edition - A premium Hindu editing community." />
+    <meta name="keywords" content="Sanatan Edition, Hindu Editing, Video Editing" />
+    <meta name="author" content="Ensor-X (Nirob Sarkar)" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" type="image/svg+xml" href="~/fav.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sanatan Edition">
+    <meta property="og:description" content="Premium Hindu Editing Community">
+    <meta property="og:image" content="/OG_IMAGE.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C9942A',
+                            light: '#E4B75C',
+                            dark: '#8A6416',
+                            hover: '#D4A444'
+                        },
+                        ink: {
+                            DEFAULT: '#1A1410',
+                            light: '#2C231D'
+                        },
+                        sand: {
+                            DEFAULT: '#FBF7EE',
+                            dark: '#F3E9D2'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['"Playfair Display"', 'serif'],
+                        body: ['"Poppins"', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body{
+            font-family:'Poppins',sans-serif;
+            -webkit-font-smoothing:antialiased;
+        }
+
+        ::-webkit-scrollbar{
+            width:10px;
+        }
+
+        ::-webkit-scrollbar-track{
+            background:#FBF7EE;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background:#C9942A;
+        }
+
+        .gold-gradient{
+            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
+        }
+
+        .gold-text-gradient{
+            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+        }
+
+        .glass-nav{
+            background:rgba(251,247,238,.85);
+            backdrop-filter:blur(12px);
+        }
+
+        .glass-card{
+            background:rgba(255,255,255,.7);
+            backdrop-filter:blur(10px);
+            border:1px solid rgba(201,148,42,.2);
+        }
+
+        .reveal{
+            opacity:0;
+            transform:translateY(30px);
+            transition:.8s;
+        }
+
+        .reveal.active{
+            opacity:1;
+            transform:none;
+        }
+    </style>
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body class="bg-sand text-ink overflow-x-hidden">
+
+    @await Html.PartialAsync("_Navigation")
+
+    @RenderBody()
+
+    @await Html.PartialAsync("_Footer")
+
+    <script src="https://www.tiktok.com/embed.js" async></script>
+
+    <script src="~/Js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

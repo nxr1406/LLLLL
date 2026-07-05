@@ -1,0 +1,49 @@
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-gold/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-3 lg:py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-gold rounded-lg" aria-label="Sanatan Edition Home">
+                <div class="w-12 h-12 rounded-full border border-gold flex items-center justify-center text-gold font-display text-2xl shadow-sm group-hover:bg-gold group-hover:text-white transition-all duration-300">
+                    ॐ
+                </div>
+                <div>
+                    <h1 class="font-display font-bold text-lg lg:text-xl leading-tight">ॐ SANATAN EDITION</h1>
+                    <p class="text-[9px] lg:text-[10px] tracking-[0.3em] text-gold-dark uppercase font-semibold">Create • Edit • Inspire</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm" aria-label="Main Navigation">
+                <a href="#" class="text-gold border-b-2 border-gold pb-1 px-1">Home</a>
+                <a href="#portfolio" class="hover:text-gold transition-colors px-1 focus:outline-none focus:text-gold">Portfolio</a>
+                <a href="#about" class="hover:text-gold transition-colors px-1 focus:outline-none focus:text-gold">About</a>
+                <a href="#team" class="hover:text-gold transition-colors px-1 focus:outline-none focus:text-gold">Team</a>
+                <a href="#contact" class="hover:text-gold transition-colors px-1 focus:outline-none focus:text-gold">Contact</a>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="flex items-center gap-4">
+                <a href="https://m.me/j/AbbcfM0JpuKtZBey/" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 gold-gradient text-white text-sm font-semibold px-6 py-2.5 rounded-full shadow-lg hover:shadow-gold/30 hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gold">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.5 5.5 3.9 7.2V22l3.6-2c.8.2 1.6.3 2.5.3 5.5 0 10-4.1 10-9.1S17.5 2 12 2z"/></svg>
+                    Join Community
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-ink hover:text-gold focus:outline-none p-2" aria-label="Toggle Menu" aria-expanded="false">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-sand border-t border-gold/15 absolute w-full shadow-xl">
+            <nav class="flex flex-col px-6 py-4 space-y-4 font-medium" aria-label="Mobile Navigation">
+                <a href="#" class="text-gold border-l-4 border-gold pl-3">Home</a>
+                <a href="#portfolio" class="hover:text-gold pl-3 transition-colors">Portfolio</a>
+                <a href="#about" class="hover:text-gold pl-3 transition-colors">About</a>
+                <a href="#team" class="hover:text-gold pl-3 transition-colors">Team</a>
+                <a href="#contact" class="hover:text-gold pl-3 transition-colors">Contact</a>
+                <a href="https://m.me/j/AbbcfM0JpuKtZBey/" class="mt-2 inline-flex items-center justify-center gap-2 gold-gradient text-white text-sm font-semibold px-5 py-3 rounded-xl shadow-md">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.1 2 11.2c0 2.9 1.5 5.5 3.9 7.2V22l3.6-2c.8.2 1.6.3 2.5.3 5.5 0 10-4.1 10-9.1S17.5 2 12 2z"/></svg>
+                    Join Messenger Community
+                </a>
+            </nav>
+        </div>
+    </header>

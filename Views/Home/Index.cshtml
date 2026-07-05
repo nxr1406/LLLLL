@@ -1,0 +1,20 @@
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+<main>
+
+    @await Html.PartialAsync("_Hero")
+
+    @await Html.PartialAsync("_Features")
+
+    @await Html.PartialAsync("_Portfolio")
+
+    @await Html.PartialAsync("_About")
+
+    @await Html.PartialAsync("_Team")
+
+    @await Html.PartialAsync("_CTA")
+
+</main>

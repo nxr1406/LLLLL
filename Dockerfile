@@ -1,15 +1,20 @@
-FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+# ---- Build Stage ----
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-COPY . .
-RUN dotnet publish Portfolio.csproj -c Release -o /app/publish
+COPY Portfolio.csproj ./
+RUN dotnet restore "Portfolio.csproj"
 
-FROM mcr.microsoft.com/dotnet/aspnet:9.0
+COPY . .
+RUN dotnet publish "Portfolio.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# ---- Runtime Stage ----
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
 COPY --from=build /app/publish .
 
-ENV ASPNETCORE_URLS=http://+:10000
-EXPOSE 10000
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
 
-ENTRYPOINT ["dotnet","Portfolio.dll"]
+ENTRYPOINT ["dotnet", "Portfolio.dll"]
