@@ -1,16 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Hosting;
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
-app.Urls.Add($"http://0.0.0.0:{port}");
-
 var builder = WebApplication.CreateBuilder(args);
 
 // অ্যাপ তৈরি
 var app = builder.Build();
 
+// Render-এর PORT ব্যবহার
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+app.Urls.Add($"http://0.0.0.0:{port}");
+
 // wwwroot থেকে Static Files সার্ভ করবে
-app.UseDefaultFiles();   // index.html ডিফল্ট হিসেবে খুলবে
+app.UseDefaultFiles();
 app.UseStaticFiles();
 
 // Optional: Health Check Route
