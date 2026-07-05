@@ -20,7 +20,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.UseStatusCodePagesWithReExecute("/Error/NotFound");
+app.UseStatusCodePagesWithReExecute("/Error/PageNotFound");
 
 app.MapControllerRoute(
     name: "default",
