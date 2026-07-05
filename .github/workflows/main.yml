@@ -1,59 +1,57 @@
-name: Keystore
+name: Generate License
 
 on:
   workflow_dispatch:
     inputs:
-      key_alias:
-        description: 'Key Alias'
+      owner:
+        description: Customer Name
         required: true
-        default: 'nxr-music-key'
-        
-      store_password:
-        description: 'Store Password'
+
+      product:
+        description: Product Name
         required: true
-        default: 'ahahxxxahah'
-        
-      key_password:
-        description: 'Key Password'
+        default: Sanatan Edition
+
+      licenseKey:
+        description: License Key
         required: true
-        default: 'ahahxxxahah'
-        
-      your_name:
-        description: 'Your Name'
+
+      expiry:
+        description: "YYYY-MM-DD অথবা none"
         required: true
-        default: 'RI Nirob Sarkar'
+        default: none
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Install Java
-        uses: actions/setup-java@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
-          distribution: 'zulu'
-          java-version: '17'
+          dotnet-version: "9.0.x"
 
-      - name: Generate Keystore
+      - name: Restore Dependencies
+        run: dotnet restore Tools/LicenseGenerator
+
+      - name: Build
+        run: dotnet build Tools/LicenseGenerator --configuration Release
+
+      - name: Generate License
         run: |
-          keytool -genkey -v \
-            -keystore release.jks \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -alias "${{ github.event.inputs.key_alias }}" \
-            -storepass "${{ github.event.inputs.store_password }}" \
-            -keypass "${{ github.event.inputs.key_password }}" \
-            -dname "CN=${{ github.event.inputs.your_name }}, O=Android, C=US"
+          dotnet run --project Tools/LicenseGenerator -- \
+          "${{ github.event.inputs.owner }}" \
+          "${{ github.event.inputs.product }}" \
+          "${{ github.event.inputs.licenseKey }}" \
+          "${{ github.event.inputs.expiry }}" \
+          "./keys/private_key.pem" \
+          "./output/LICENSE.xml"
 
-      - name: Convert to Base64
-        run: |
-          echo "====== KEYSTORE_BASE64 ======"
-          base64 -i release.jks | tr -d '\n'
-          echo ""
-          echo "=============================="
-
-      - name: Upload Keystore
+      - name: Upload LICENSE.xml
         uses: actions/upload-artifact@v4
         with:
-          name: release-keystore
-          path: release.jks
+          name: LICENSE
+          path: output/LICENSE.xmlxml
