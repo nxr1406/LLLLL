@@ -1,6 +1,9 @@
 @{
-    ViewData["Title"] = "404 - Page Not Found";
-    Layout = "_ErrorLayout";
+    ViewData["Title"] = "404 Not Found On Server";
+    ViewData["OgTitle"] = "404 Error";
+    ViewData["OgDescription"] = "404 Not Found On Server";
+    ViewData["OgImage"] = $"{Context.Request.Scheme}://{Context.Request.Host}/Images/OG_404.jpg";
+    Layout = "_Layout";
 }
   <main class="flex-grow flex items-center justify-center relative overflow-hidden px-6 py-20" role="main">
     

@@ -7,22 +7,13 @@
 
     <title>@ViewData["Title"] | Sanatan Edition</title>
 
-    <meta name="description" content="Sanatan Edition - A premium Hindu editing community." />
-    <meta name="keywords" content="Sanatan Edition, Hindu Editing, Video Editing" />
-    <meta name="author" content="Ensor-X (Nirob Sarkar)" />
-    <meta name="robots" content="index, follow" />
-
-    <link rel="icon" type="image/svg+xml" href="~/fav.svg" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sanatan Edition">
-    <meta property="og:description" content="Premium Hindu Editing Community">
-    <meta property="og:image" content="/OG_IMAGE.png">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-
+    <meta property="og:title" content="@ViewData["OgTitle"]" />
+    <meta property="og:description" content="@ViewData["OgDescription"]" />
+    <meta property="og:image" content="@ViewData["OgImage"]" />
+    
+    <meta name="twitter:title" content="@ViewData["OgTitle"]" />
+    <meta name="twitter:description" content="@ViewData["OgDescription"]" />
+    <meta name="twitter:image" content="@ViewData["OgImage"]" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
