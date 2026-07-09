@@ -39,46 +39,7 @@
             }
         }
     </script>
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .font-display {
-            font-family: 'Playfair Display', serif;
-        }
-
-        .om-glow {
-            text-shadow: 0 0 30px rgba(201,148,42,.8),
-                         0 0 60px rgba(201,148,42,.4);
-        }
-
-        .gold-gradient {
-            background: linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
-        }
-
-        .gold-text-gradient{
-            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
-
-        .hero-bg{
-            background:
-                radial-gradient(circle at 50% 50%,rgba(228,183,92,.15) 0%,rgba(228,183,92,.05) 40%,transparent 70%),
-                linear-gradient(180deg,#FBF7EE 0%,#F3E9D2 55%,#E9D9AE 100%);
-        }
-
-        @@keyframes float{
-            0%,100%{transform:translateY(0)}
-            50%{transform:translateY(-10px)}
-        }
-
-        .animate-float{
-            animation:float 6s ease-in-out infinite;
-        }
-    </style>
+    <link rel="stylesheet" href="~/Css/style.css" asp-append-version="true" />
 </head>
 
 <body class="bg-[#FBF7EE] text-ink min-h-screen hero-bg">

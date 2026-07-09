@@ -1,5 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// =========================
+// Future Admin Credentials
+// =========================
+string username = "COMMING_SOON";
+string password = "COMMING_SOON";
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -9,7 +15,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios.
     app.UseHsts();
 }
 
@@ -17,6 +22,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// Redirect all /blog requests to coming.html
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path.StartsWithSegments("/blog"))
+    {
+        context.Response.Redirect("/coming.html");
+        return;
+    }
+
+    await next();
+});
 
 app.UseAuthorization();
 

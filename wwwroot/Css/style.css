@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FBF7EE;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C9942A;
+}
+
+/* Gradients */
+.gold-gradient {
+    background: linear-gradient(135deg, #E4B75C, #C9942A, #8A6416);
+}
+
+.gold-text-gradient {
+    background: linear-gradient(135deg, #E4B75C, #C9942A, #8A6416);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Navigation */
+.glass-nav {
+    background: rgba(251, 247, 238, .85);
+    backdrop-filter: blur(12px);
+}
+
+/* Cards */
+.glass-card {
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(201, 148, 42, .2);
+}
+
+/* Hero */
+.hero-bg {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(228,183,92,.15) 0%, rgba(228,183,92,.05) 40%, transparent 70%),
+        linear-gradient(180deg, #FBF7EE 0%, #F3E9D2 55%, #E9D9AE 100%);
+}
+
+/* Effects */
+.om-glow {
+    text-shadow:
+        0 0 30px rgba(201,148,42,.8),
+        0 0 60px rgba(201,148,42,.4);
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .8s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: none;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}

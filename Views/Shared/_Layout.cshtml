@@ -52,58 +52,7 @@
             }
         };
     </script>
-
-    <style>
-        body{
-            font-family:'Poppins',sans-serif;
-            -webkit-font-smoothing:antialiased;
-        }
-
-        ::-webkit-scrollbar{
-            width:10px;
-        }
-
-        ::-webkit-scrollbar-track{
-            background:#FBF7EE;
-        }
-
-        ::-webkit-scrollbar-thumb{
-            background:#C9942A;
-        }
-
-        .gold-gradient{
-            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
-        }
-
-        .gold-text-gradient{
-            background:linear-gradient(135deg,#E4B75C,#C9942A,#8A6416);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
-
-        .glass-nav{
-            background:rgba(251,247,238,.85);
-            backdrop-filter:blur(12px);
-        }
-
-        .glass-card{
-            background:rgba(255,255,255,.7);
-            backdrop-filter:blur(10px);
-            border:1px solid rgba(201,148,42,.2);
-        }
-
-        .reveal{
-            opacity:0;
-            transform:translateY(30px);
-            transition:.8s;
-        }
-
-        .reveal.active{
-            opacity:1;
-            transform:none;
-        }
-    </style>
-
+    <link rel="stylesheet" href="~/Css/style.css" asp-append-version="true" />
     @RenderSection("Styles", required: false)
 </head>
 
