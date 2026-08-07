@@ -1,0 +1,6 @@
+{
+  "name": "NXR Chat",
+  "description": "Direct peer-to-peer (P2P) encrypted chat application with local RSA key pair generation, direct Wi-Fi socket messaging, and local Room persistence.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
